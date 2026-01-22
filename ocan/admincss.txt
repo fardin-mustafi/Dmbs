@@ -1,0 +1,163 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  background: radial-gradient(circle at top, #0b2740, #061726);
+  color:#eaf6ff;
+}
+
+/* LAYOUT */
+.admin-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:240px;
+  background:#0c3558;
+  padding:20px;
+  flex-shrink:0;
+}
+
+.brand{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:30px;
+}
+
+.sidebar nav a{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 14px;
+  margin-bottom:8px;
+  color:#cfe9ff;
+  text-decoration:none;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.sidebar nav a i{
+  width:20px;
+  text-align:center;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active{
+  background:#134a73;
+}
+
+.sidebar nav a.logout{
+  margin-top:20px;
+  background:#133b55;
+}
+
+/* MAIN */
+.main{
+  flex:1;
+  padding:28px;
+}
+
+/* TOP BAR */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.time-box{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  opacity:.85;
+}
+
+/* SUMMARY CARDS */
+.summary{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:18px;
+  margin-bottom:30px;
+}
+
+.summary .card{
+  background:#0f2f4a;
+  padding:20px;
+  border-radius:16px;
+  position:relative;
+}
+
+.summary .card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:5px;
+  border-radius:16px 0 0 16px;
+  background:#3bbcff;
+}
+
+.summary .pending::before{background:#ffd24c}
+.summary .alert::before{background:#ff5d4f}
+
+/* PANEL */
+.panel{
+  background:#0f2f4a;
+  padding:20px;
+  border-radius:18px;
+}
+
+.panel h2{
+  margin-bottom:14px;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+thead{
+  background:#124366;
+}
+
+th,td{
+  padding:12px;
+  text-align:left;
+}
+
+tbody tr{
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.note{
+  margin-top:12px;
+  font-size:13px;
+  opacity:.7;
+}
+
+/* BUTTONS */
+.btn{
+  padding:6px 12px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  color:white;
+}
+
+.btn.approve{background:#2ecc71}
+.btn.reject{background:#e74c3c}
+
+/* MAP */
+#map{
+  height:520px;
+  border-radius:18px;
+  overflow:hidden;
+}

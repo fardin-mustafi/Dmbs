@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bangladesh Map</title>
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+
+<div class="admin-layout">
+  <!-- SAME SIDEBAR COPY -->
+  <!-- main -->
+  <main class="main">
+    <h1>Bangladesh Coast Map</h1>
+    <div id="map"></div>
+  </main>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+const map = L.map('map').setView([23.685, 90.356], 7);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+  attribution:'© OpenStreetMap'
+}).addTo(map);
+</script>
+</body>
+</html>

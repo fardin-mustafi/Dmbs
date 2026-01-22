@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SOS Monitor</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="admin-layout">
+<aside class="sidebar">
+<div class="brand">🌊 OceanEye</div>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="users.html">Users</a>
+<a class="active" href="sos.html">SOS</a>
+<a href="map.html">Map</a>
+<a class="logout">Logout</a>
+</nav>
+</aside>
+
+<main class="main">
+<header class="topbar">
+<h1>SOS Monitor</h1>
+<span id="liveTime"></span>
+</header>
+
+</main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
