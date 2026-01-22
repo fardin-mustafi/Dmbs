@@ -1,28 +1,41 @@
+# OceanEye (DBMS Course Project) — Frontend
 
+OceanEye is a DBMS course project frontend that includes authentication pages and dashboard UIs for different user roles (e.g., Fisherman, Admin).
 
-# DBMS Project (OceanEye)
+## ✨ Features
+- Signup & Login UI
+- Fisherman dashboard (basic + advanced UI)
+- Admin pages (user management template)
+- Organized CSS styles
 
-A DBMS course project with signup/login and dashboard pages.
+## 🧰 Tech Stack
+- HTML
+- CSS
+- (Add backend/db if you used: MySQL/Oracle/SQLite)
 
-## Features
-- User authentication pages (signup, login)
-- Fisherman dashboard UI
-- Organized CSS structure
+## 📁 Project Structure
+- `Oceaneyes/` — Full project frontend (main UI pages)
+- `admin/` — Admin related pages (code only)
+- `ocan/` — Additional frontend code (code only)
+- `Css/` — Common CSS styles
+- `signup/` — Signup pages (Fisherman / Coast Guard)
+- `login/` — Login page (OceanEye platform)
+- `fishermandashboard/` — Fisherman dashboard (basic)
+- `advancefisherman ui/` — Fisherman dashboard (advanced UI)
+- `admin user/` — Admin user management template
 
-## Tech Stack
-- HTML, CSS
-- (Add DB name: MySQL/PostgreSQL if used)
-- SQL (if you have schema/queries)
+## ▶️ How to Run (Frontend)
+1. Download ZIP or clone the repository
+2. Open the main entry page in browser (choose one):
+   - `Oceaneyes/index.html` (recommended if exists)
+   - `login/index.html`
+   - `signup/index.html`
 
-## Folder Structure
-- `signup/` - Signup pages
-- `login/` - Login pages
-- `fishermandashboard/` - Dashboard UI
-- `Css/` - Styles
+> Tip: Use VS Code + Live Server extension for best experience.
 
-## How to Run
-1. Download or clone the repo
-2. Open `signup/index.html` (or your main page) in browser
+## 📝 Notes
+- This repository currently contains the frontend/UI part.
+- Database schema/queries can be added later in a `sql/` folder (recommended).
 
-## Author
-Fardin Mustafi
+## 👤 Author
+**Fardin Mustafi**
