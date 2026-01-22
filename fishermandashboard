@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OceanEye | Fisherman Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="dashboard.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <i class="fas fa-water"></i>
+      <h1>OceanEye Homepage</h1>
+    </div>
+
+    <div class="last-updated">
+      Last updated: <span id="update-time"></span>
+    </div>
+  </header>
+
+  <!-- DASHBOARD GRID -->
+  <main class="dashboard">
+
+    <!-- WEATHER -->
+    <div class="card weather">
+      <h2><i class="fas fa-sun"></i> Weather</h2>
+      <div class="big" id="temp">--°F</div>
+      <p>Wind: --</p>
+      <p>Humidity: --</p>
+    </div>
+
+    <!-- ALERT -->
+    <div class="card alert">
+      <h2><i class="fas fa-triangle-exclamation"></i> Alert</h2>
+      <strong>--</strong>
+      <p>No active alert</p>
+    </div>
+
+    <!-- WAVES -->
+    <div class="card waves">
+      <h2><i class="fas fa-water"></i> Waves</h2>
+      <div class="big"><span id="wave">--</span> ft</div>
+      <p>Direction: --</p>
+    </div>
+
+    <!-- TIDES -->
+    <div class="card tides">
+      <h2><i class="fas fa-tint"></i> Tides</h2>
+      <p><b>--</b></p>
+      <p>High Tide: --</p>
+    </div>
+
+    <!-- SAFETY -->
+    <div class="card safety">
+      <h2><i class="fas fa-life-ring"></i> Safety</h2>
+      <p>Status: <span class="safe">--</span></p>
+      <p>Fishinsg: --</p>
+    </div>
+
+    <!-- ZONE -->
+    <div class="card zone">
+      <h2><i class="fas fa-map"></i> Zone</h2>
+      <p>--</p>
+    </div>
+
+    <!-- LAST LOCATION -->
+    <div class="card location">
+      <h2><i class="fas fa-location-dot"></i> Last Location</h2>
+      <p>Latitude: <b>--</b></p>
+      <p>Longitude: <b>--</b></p>
+    </div>
+
+    <!-- SOS BUTTON -->
+    <button class="sos">
+      🚨 SEND SOS
+    </button>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Team The Error Squad. All rights reserved.
+  </footer>
+
+</div>
+
+<!-- JS -->
+<script>
+/* REAL-TIME CLOCK (KEEP) */
+function updateTime(){
+  const now = new Date();
+  document.getElementById("update-time").innerText =
+    now.toLocaleString();
+}
+updateTime();
+setInterval(updateTime, 60000);
+
+
+</script>
+
+</body>
+</html>
+
