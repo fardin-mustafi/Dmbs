@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OceanEye | Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      🌊 <span>OceanEye</span>
+    </div>
+
+    <nav>
+      <a class="active"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+      <a><i class="fa-solid fa-user-check"></i> Approvals</a>
+      <a><i class="fa-solid fa-users"></i> Users</a>
+      <a><i class="fa-solid fa-triangle-exclamation"></i> SOS Monitor</a>
+      <a><i class="fa-solid fa-map"></i> Map</a>
+      <a class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <h1>Admin Homepage</h1>
+      <div class="time-box">
+        <i class="fa-regular fa-clock"></i>
+        <span id="liveTime">--</span>
+      </div>
+    </header>
+
+    <!-- SUMMARY -->
+    <section class="summary">
+      <div class="card">
+        <h4>Total Users</h4>
+        <p>—</p>
+      </div>
+      <div class="card pending">
+        <h4>Pending Approvals</h4>
+        <p>—</p>
+      </div>
+      <div class="card alert">
+        <h4>Active SOS</h4>
+        <p>—</p>
+      </div>
+      <div class="card">
+        <h4>Coast Guard Units</h4>
+        <p>—</p>
+      </div>
+    </section>
+
+    <!-- APPROVAL TABLE -->
+    <section class="panel">
+      <h2>⏳ Pending User Approvals</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>ID / Email</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="approvalTable">
+          <!-- Backend will inject rows -->
+        </tbody>
+      </table>
+
+      <p class="note">
+        Users will remain inactive until approved by admin.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  © 2026 Team The Error Squad. All rights reserved.
+</footer>
+
+<script src="admin.js"></script>
+</body>
+</html>

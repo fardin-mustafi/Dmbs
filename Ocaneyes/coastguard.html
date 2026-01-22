@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OceanEye – Coast Guard Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="coastguard.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    🌊 <strong>OceanEye</strong> – Coast Guard Homepage
+  </div>
+  <div id="time"></div>
+</header>
+
+<main class="layout">
+
+  <!-- LEFT INFO CARDS -->
+  <aside class="side-cards">
+    <div class="info-card">
+      <h3>🌦 Weather</h3>
+      <p>Temp: <span id="temp">--</span> °C</p>
+      <p>Wind: <span id="wind">--</span> km/h</p>
+    </div>
+
+    <div class="info-card">
+      <h3>🌊 Waves</h3>
+      <p>Height: <span id="wave">--</span> ft</p>
+      <p>Status: --</p>
+    </div>
+
+    <div class="info-card alert">
+      <h3>🚨 Active SOS</h3>
+      <p id="sosCount">0 boats</p>
+    </div>
+
+    <div class="info-card">
+      <h3>🚤 Patrol Units</h3>
+      <p>Active: --</p>
+      <p>Available: --</p>
+    </div>
+  </aside>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <div id="bdMap"></div>
+  </section>
+
+</main>
+
+<!-- SOS TABLE -->
+<section class="table-section">
+  <h2>🚨 SOS Alert List</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Boat ID</th>
+        <th>Fisherman</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="sosTable">
+      <!-- Backend will inject rows here -->
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  © 2026 Team The Error Squad. All rights reserved.
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="coastguard.js"></script>
+</body>
+</html>
