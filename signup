@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OceanEye | Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="signup-page">
+
+<div class="card">
+
+  <div class="brand">
+    <div class="logo">🌊</div>
+    <h1>OceanEye</h1>
+    <p>Marine Safety & Monitoring Platform</p>
+  </div>
+
+  <div class="roles">
+    <button id="btnF" class="active">Fisherman</button>
+    <button id="btnA">Coast Guard</button>
+  </div>
+
+  <!-- Fisherman -->
+  <div id="fisher" class="panel active">
+    <h2>Fisherman Registration</h2>
+
+    <label>Full Name</label>
+    <input type="text">
+
+    <label>Mobile Number</label>
+    <input type="text">
+
+    <label>Fishing License</label>
+    <input type="text">
+
+    <label>Boat Registration ID</label>
+    <input type="text">
+
+    <label>NID No</label>
+    <input type="text">
+
+    <label>Address / Base Port</label>
+    <input type="text">
+
+    <label>Password</label>
+    <input type="password">
+  </div>
+
+  <!-- Coast Guard -->
+  <div id="auth" class="panel">
+    <h2>Coast Guard Registration</h2>
+
+    <label>Officer Name</label>
+    <input type="text">
+
+    <label>Official Email</label>
+    <input type="email">
+
+    <label>Station / Zone</label>
+    <input type="text">
+
+    <label>Service ID</label>
+    <input type="text">
+
+    <label>Password</label>
+    <input type="password">
+  </div>
+
+  <button class="cta">Create Account</button>
+
+  <p class="login-text">
+    Already have an account?
+    <a href="#" onclick="goLogin()">Login</a>
+  </p>
+
+  <p class="copyright">
+    © 2026 Team The Error Squad. All rights reserved.
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
