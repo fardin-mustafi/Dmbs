@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OceanEye | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+<div class="card">
+
+  <div class="brand">
+    <div class="logo">🌊</div>
+    <h1>OceanEye</h1>
+    <p>Marine Safety & Monitoring Platform</p>
+  </div>
+
+  <div class="roles">
+    <button id="btnF" class="active">Fisherman</button>
+    <button id="btnA">Coast Guard</button>
+    <button id="btnAd">Admin</button>
+  </div>
+
+  <!-- Fisherman -->
+  <div id="fisher" class="panel active">
+    <h2>Fisherman Login</h2>
+
+    <label>Registered Mobile / Boat ID</label>
+    <input type="text">
+
+    <label>Password</label>
+    <input type="password">
+  </div>
+
+  <!-- Coast Guard -->
+  <div id="auth" class="panel">
+    <h2>Coast Guard Login</h2>
+    <small>Authorized personnel only</small>
+
+    <label>Official Email</label>
+    <input type="email">
+
+    <label>Password</label>
+    <input type="password">
+  </div>
+
+  <!-- Admin -->
+  <div id="admin" class="panel">
+    <h2>Admin Login</h2>
+    <small>System Administrator Only</small>
+
+    <label>Admin Email</label>
+    <input type="email" id="adminEmail">
+
+    <label>Password</label>
+    <input type="password" id="adminPass">
+  </div>
+
+  <button class="cta" onclick="handleLogin()">Login</button>
+
+  <p class="login-text">
+    Don’t have an account?
+    <a href="#" onclick="goSignup()">Sign up</a>
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
